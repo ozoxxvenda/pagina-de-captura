@@ -1,227 +1,122 @@
 <!DOCTYPE html>
-<html lang="pt-BR" prefix="og: https://ogp.me/ns#" itemscope itemtype="https://schema.org/WebPage">
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
 <head>
-    <!-- 1. META TAGS ESSENCIAIS PARA PERFORMANCE -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 2. SEO OTIMIZADO -->
-    <title>Ozoxx | Acesso Exclusivo a Produtos Premium para Saúde e Bem-Estar</title>
+    <title>Ozoxx | Acesso Exclusivo a Produtos Premium</title>
     
-    <meta name="description" content="Acesso exclusivo Ozoxx. Produtos premium para saúde, qualidade de vida e bem-estar. Cadastre-se para conteúdo especial.">
-    <meta name="keywords" content="ozoxx, produtos saúde, bem-estar, qualidade de vida, terapia, saúde, produtos premium">
+    <meta name="description" content="Acesso exclusivo Ozoxx. Produtos premium para saúde e qualidade de vida.">
+    <meta name="keywords" content="ozoxx, produtos, saúde, bem-estar, terapia">
     <meta name="author" content="Ozoxx">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#667eea">
+    <meta name="robots" content="index, follow">
     
-    <!-- 3. OPEN GRAPH PARA REDES SOCIAIS -->
-    <meta property="og:title" content="Ozoxx | Acesso Exclusivo a Produtos Premium">
-    <meta property="og:description" content="Cadastre-se para acessar conteúdos exclusivos sobre saúde e bem-estar">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seusite.com">
-    <meta property="og:image" content="https://seusite.com/og-image.jpg">
-    <meta property="og:image:alt" content="Ozoxx - Produtos Premium">
-    <meta property="og:locale" content="pt_BR">
-    
-    <!-- 4. TWITTER CARDS -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ozoxx | Acesso Exclusivo">
-    <meta name="twitter:description" content="Conteúdo exclusivo sobre saúde e bem-estar">
-    
-    <!-- 5. PRE-CONNECT PARA PERFORMANCE -->
-    <link rel="preconnect" href="https://script.google.com" crossorigin>
+    <!-- PRELOAD E PRE-CONNECT PARA PERFORMANCE -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="dns-prefetch" href="https://script.google.com">
+    <link rel="preconnect" href="https://script.google.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
-    <!-- 6. GTM OTIMIZADO PARA VELOCIDADE (SEM BLOQUEIO) -->
-    <!-- Google Tag Manager -->
+    <!-- GOOGLE TAG MANAGER (HEAD) - VERSÃO OTIMIZADA -->
     <script>
     (function(w,d,s,l,i){
-        // Detecção de conexão lenta
-        var isSlowConnection = navigator.connection ? 
-            (navigator.connection.saveData || 
-             navigator.connection.effectiveType === 'slow-2g' || 
-             navigator.connection.effectiveType === '2g') : false;
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
         
-        // Estratégia de carregamento baseada na conexão
-        var loadStrategy = isSlowConnection ? 'lazy' : 'delayed';
-        var loadDelay = isSlowConnection ? 4000 : 2000;
-        
-        // Carrega GTM apenas após interação ou tempo específico
-        function loadGTM() {
-            if(w[l] && w[l].start) return; // Já carregou
-            
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+        // Carregamento otimizado sem bloquear
+        setTimeout(function(){
             var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),
-                dl=l!='dataLayer'?'&l='+l:'';
-            
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
             j.async=true;
-            j.defer=true;
             j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            
-            // Error handling silencioso
-            j.onerror = function() {
-                console.warn('GTM: Carregamento não crítico falhou');
-            };
-            
-            if(f && f.parentNode){
-                f.parentNode.insertBefore(j,f);
-            } else {
-                d.head.appendChild(j);
-            }
-        }
-        
-        // Estratégia de carregamento
-        if(loadStrategy === 'lazy') {
-            // Para conexões lentas: carrega após 4s ou na interação
-            setTimeout(loadGTM, loadDelay);
-            
-            // Carrega na primeira interação
-            ['click', 'touchstart', 'keydown', 'scroll'].forEach(function(event) {
-                w.addEventListener(event, function handler() {
-                    loadGTM();
-                    w.removeEventListener(event, handler, {passive: true});
-                }, {passive: true, once: true});
-            });
-        } else {
-            // Conexões boas: carrega após 2s
-            w.addEventListener('load', function() {
-                setTimeout(loadGTM, loadDelay);
-            });
-        }
-        
-        // Fallback: carrega antes de sair
-        w.addEventListener('beforeunload', function() {
-            if(!w[l] || !w[l].start) {
-                loadGTM();
-            }
-        });
-        
+            f.parentNode.insertBefore(j,f);
+        },1500);
     })(window,document,'script','dataLayer','GTM-XXXXXX');
     </script>
-    <!-- End Google Tag Manager -->
+    <!-- END GOOGLE TAG MANAGER -->
     
-    <!-- 7. SCHEMA MARKUP OTIMIZADO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Ozoxx Acesso Exclusivo",
-        "description": "Página de acesso exclusivo para produtos premium de saúde e bem-estar",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Ozoxx",
-            "url": "https://seusite.com",
-            "logo": "https://seusite.com/logo.png"
-        },
-        "mainEntity": {
-            "@type": "Service",
-            "serviceType": "Produtos de Saúde",
-            "description": "Acesso exclusivo a produtos premium para saúde e qualidade de vida"
-        }
-    }
-    </script>
-    
-    <!-- 8. CSS CRÍTICO INLINE (OTIMIZADO) -->
     <style>
-        /* CRITICAL CSS - RENDERIZAÇÃO IMEDIATA */
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}.gate-container{background:#fff;border-radius:10px;padding:clamp(20px,5vw,40px);box-shadow:0 10px 40px rgba(0,0,0,.2);max-width:min(500px,90vw);width:100%;animation:fadeIn .5s ease-out}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-        
-        /* CONTENT VISIBLE IMMEDIATELY */
-        h1{color:#333;font-size:clamp(1.5rem,4vw,2rem);margin-bottom:10px;text-align:center;line-height:1.2}.subtitle{color:#666;text-align:center;margin-bottom:30px;font-size:clamp(.9rem,2.5vw,1.1rem);line-height:1.4}
-        
-        /* FORM STYLES */
-        .form-group{margin-bottom:20px}input{width:100%;padding:14px;border:2px solid #e1e1e1;border-radius:6px;font-size:16px;min-height:52px;transition:border-color .3s}input:focus{border-color:#667eea;outline:0}button{width:100%;padding:16px;background:linear-gradient(135deg,#667eea 0%,#764ba2);color:#fff;border:0;border-radius:6px;font-size:1rem;cursor:pointer;min-height:52px;font-weight:600;transition:opacity .3s}button:disabled{opacity:.7;cursor:not-allowed}.privacy{font-size:.75rem;color:#888;text-align:center;margin-top:25px;line-height:1.5}#errorMsg{display:none;color:#d00;padding:12px;margin-top:15px;border:1px solid #fcc;background:#fee;border-radius:6px}#loading{display:none;text-align:center;margin:20px 0;color:#667eea}
-        
-        /* LOADING ANIMATION */
-        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}#loading{animation:pulse 1.5s ease-in-out infinite}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}.gate-container{background:#fff;border-radius:10px;padding:clamp(20px,5vw,40px);box-shadow:0 10px 40px rgba(0,0,0,.2);max-width:min(500px,90vw);width:100%}h1{color:#333;font-size:clamp(1.5rem,4vw,2rem);margin-bottom:10px;text-align:center}.subtitle{color:#666;text-align:center;margin-bottom:30px;font-size:clamp(.9rem,2.5vw,1.1rem)}.form-group{margin-bottom:20px}input{width:100%;padding:14px;border:2px solid #e1e1e1;border-radius:6px;font-size:16px;min-height:52px}input:focus{border-color:#667eea;outline:0}button{width:100%;padding:16px;background:linear-gradient(135deg,#667eea 0%,#764ba2);color:#fff;border:0;border-radius:6px;font-size:1rem;cursor:pointer;min-height:52px;font-weight:600}.privacy{font-size:.75rem;color:#888;text-align:center;margin-top:25px}#errorMsg{display:none;color:#d00;padding:12px;margin-top:15px;border:1px solid #fcc;background:#fee;border-radius:6px}#loading{display:none;text-align:center;margin:20px 0;color:#667eea}
     </style>
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Ozoxx Acesso Exclusivo","description":"Página de acesso exclusivo Ozoxx","publisher":{"@type":"Organization","name":"Ozoxx"}}
+    </script>
 </head>
 <body>
-    <!-- 9. NOSCRIPT PARA GTM E FALLBACK -->
+    <!-- GOOGLE TAG MANAGER (NOSCRIPT) -->
     <noscript>
-        <!-- Google Tag Manager (noscript) -->
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTT7KD6G"
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
                 height="0" width="0"
                 style="display:none;visibility:hidden"
-                title="Google Tag Manager"
-                aria-hidden="true">
+                title="Google Tag Manager">
         </iframe>
-        <!-- End Google Tag Manager (noscript) -->
-        <style>.gate-container{animation:none}</style>
     </noscript>
+    <!-- END GOOGLE TAG MANAGER (NOSCRIPT) -->
     
-    <!-- 10. CONTEÚDO PRINCIPAL -->
-    <div class="gate-container" role="main">
-        <h1 itemprop="headline">🎁 Conheça o Ozoxx</h1>
-        <p class="subtitle" itemprop="description">Preencha para acessar conteúdo exclusivo</p>
+    <div class="gate-container">
+        <h1>🎁 Conheça o Ozoxx</h1>
+        <p class="subtitle">Preencha para acessar conteúdo exclusivo</p>
         
-        <form id="leadForm" aria-label="Formulário de acesso exclusivo">
+        <form id="leadForm">
             <!-- Nome -->
             <div class="form-group">
                 <input type="text" 
                        name="nome" 
                        placeholder="Seu nome completo" 
                        required 
-                       aria-label="Nome completo"
+                       aria-label="Nome"
                        autocomplete="name"
-                       minlength="2"
-                       aria-required="true">
+                       minlength="2">
             </div>
             
-            <!-- Telefone -->
+            <!-- Telefone BR - REGEX CORRIGIDA -->
             <div class="form-group">
                 <input type="tel" 
                        name="tel" 
                        id="phoneInput"
                        placeholder="(11) 99999-9999" 
                        required 
-                       aria-label="Número de telefone"
+                       aria-label="Telefone"
                        autocomplete="tel"
                        pattern="^\([1-9]{2}\) 9[0-9]{4}-[0-9]{4}$"
-                       title="Digite um telefone válido com DDD: (11) 99999-9999"
-                       maxlength="15"
-                       aria-required="true">
+                       title="(DDD) 99999-9999"
+                       maxlength="15">
             </div>
             
-            <!-- Email -->
+            <!-- Email - REGEX CORRIGIDA -->
             <div class="form-group">
                 <input type="email" 
                        name="email" 
                        placeholder="seu@email.com" 
                        required
-                       aria-label="Endereço de email"
+                       aria-label="Email"
                        autocomplete="email"
                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                       title="Digite um email válido: exemplo@gmail.com"
-                       maxlength="100"
-                       aria-required="true">
+                       title="ex: nome@gmail.com"
+                       maxlength="100">
             </div>
             
-            <button type="submit" id="submitBtn" aria-label="Enviar formulário para acessar conteúdo exclusivo">
+            <button type="submit" id="submitBtn">
                 👉 Acessar Conteúdo Exclusivo
             </button>
             
-            <div id="loading" role="alert" aria-live="polite">Processando...</div>
-            <div id="errorMsg" role="alert" aria-live="assertive"></div>
+            <div id="loading">Processando...</div>
+            <div id="errorMsg"></div>
         </form>
         
-        <p class="privacy" itemprop="disambiguatingDescription">
-            🔒 Seus dados estão protegidos. Ao enviar, você concorda com nossa política de privacidade.
+        <p class="privacy">
+            🔒 Seus dados estão protegidos.
         </p>
     </div>
 
-    <!-- 11. JAVASCRIPT OTIMIZADO COM GTM INTEGRATION -->
+    <!-- JAVASCRIPT CORRIGIDO COM INTEGRAÇÃO GTM -->
     <script>
     !function(){'use strict';
     // ⚠️⚠️⚠️ ALTERE ESTA URL PARA A DO SEU GOOGLE APPS SCRIPT ⚠️⚠️⚠️
     const API_URL='https://script.google.com/macros/s/AKfycbyVxcQuPmxshpZmigu-LDTTLF3dZGGdWFdLYbxdqgusW1XDDbl8jHN5GNzlVaMsfj8J/exec';
     const REDIRECT_URL='https://ozoxxvenda.github.io/ozoxxterapia/home.html';
     
-    // Initialize DataLayer if not exists
+    // Inicializa dataLayer para GTM
     window.dataLayer = window.dataLayer || [];
     
     function init(){
@@ -252,19 +147,16 @@
                 return;
             }
             
-            // Disparar evento GTM de início (antes do envio)
-            try{
+            // Disparar evento GTM de início do formulário
+            try {
                 window.dataLayer.push({
-                    'event': 'formSubmissionStarted',
-                    'formType': 'leadCapture',
-                    'formName': 'Ozoxx Access',
-                    'timestamp': new Date().toISOString()
+                    'event': 'form_submission_start',
+                    'form_type': 'ozoxx_capture'
                 });
-            }catch(e){console.log('GTM event error:',e)}
+            } catch(e) { console.log('GTM push error:', e); }
             
             b.disabled=true;
             b.textContent='Enviando...';
-            b.setAttribute('aria-label', 'Enviando dados, por favor aguarde');
             const l=document.getElementById('loading');
             l&&(l.style.display='block');
             
@@ -272,91 +164,68 @@
                 const d={
                     nome:this.nome.value.trim(),
                     email:this.email.value.trim(),
-                    tel:this.tel.value.trim(),
-                    source: window.location.href,
-                    timestamp: new Date().toISOString()
+                    tel:this.tel.value.trim()
                 };
                 
                 console.log('Enviando:',d);
                 
-                // Timeout para evitar travamento
-                const timeoutPromise = new Promise((_, reject) => 
-                    setTimeout(() => reject(new Error('Timeout')), 10000)
-                );
-                
-                const fetchPromise = fetch(API_URL,{
+                const r=await fetch(API_URL,{
                     method:'POST',
                     headers:{'Content-Type':'application/x-www-form-urlencoded'},
                     body:new URLSearchParams(d).toString()
                 });
                 
-                const r=await Promise.race([fetchPromise, timeoutPromise]);
                 const j=await r.json();
                 console.log('Resposta:',j);
                 
                 if(j.success){
                     // Disparar evento GTM de sucesso
-                    try{
+                    try {
                         window.dataLayer.push({
-                            'event': 'formSubmissionSuccess',
-                            'formType': 'leadCapture',
-                            'formName': 'Ozoxx Access',
-                            'leadData': {
-                                'hasName': !!d.nome,
-                                'hasEmail': !!d.email,
-                                'hasPhone': !!d.tel
-                            },
-                            'timestamp': new Date().toISOString()
+                            'event': 'form_submission_success',
+                            'form_type': 'ozoxx_capture',
+                            'lead_data': {
+                                'has_name': !!d.nome,
+                                'has_email': !!d.email,
+                                'has_phone': !!d.tel
+                            }
                         });
-                    }catch(e){console.log('GTM success event error:',e)}
+                    } catch(e) { console.log('GTM success error:', e); }
                     
-                    // Salvar localmente
                     localStorage.setItem('ozoxx_done','true');
-                    localStorage.setItem('ozoxx_submit_time', new Date().toISOString());
-                    
-                    // Redirecionar com delay otimizado
                     setTimeout(()=>{
                         window.location.href=REDIRECT_URL;
-                    }, 300); // Reduzido para melhor UX
-                    
+                    },800);
                 }else{
-                    throw new Error(j.message||'Erro no servidor');
+                    throw new Error(j.message||'Erro');
                 }
                 
             }catch(err){
                 console.error('Erro:',err);
                 
                 // Disparar evento GTM de erro
-                try{
+                try {
                     window.dataLayer.push({
-                        'event': 'formSubmissionError',
-                        'formType': 'leadCapture',
-                        'errorType': err.name,
-                        'errorMessage': err.message.substring(0, 100),
-                        'timestamp': new Date().toISOString()
+                        'event': 'form_submission_error',
+                        'form_type': 'ozoxx_capture',
+                        'error_message': err.message.substring(0, 100)
                     });
-                }catch(e){console.log('GTM error event error:',e)}
+                } catch(e) { console.log('GTM error push error:', e); }
                 
                 b.disabled=false;
                 b.textContent='👉 Acessar Conteúdo Exclusivo';
-                b.setAttribute('aria-label', 'Tentar novamente - acessar conteúdo exclusivo');
                 l&&(l.style.display='none');
-                showError(err.name==='TypeError'?'Erro de conexão. Verifique sua internet.':'Erro: '+err.message);
+                showError(err.name==='TypeError'?'Erro de conexão':'Erro: '+err.message);
             }
         });
         
-        // Track form interactions
-        f.querySelectorAll('input').forEach(input => {
-            input.addEventListener('focus', function() {
-                try{
-                    window.dataLayer.push({
-                        'event': 'formFieldFocus',
-                        'fieldName': this.name,
-                        'formType': 'leadCapture'
-                    });
-                }catch(e){}
+        // Disparar evento de visualização da página
+        try {
+            window.dataLayer.push({
+                'event': 'page_view',
+                'page_type': 'ozoxx_capture_page'
             });
-        });
+        } catch(e) { console.log('GTM pageview error:', e); }
     }
     
     function showError(m){
@@ -367,40 +236,7 @@
         setTimeout(()=>e.style.display='none',5000);
     }
     
-    // Load GTM on user interaction (backup strategy)
-    document.addEventListener('DOMContentLoaded', function() {
-        init();
-        
-        // Trigger GTM load on first interaction as backup
-        ['click', 'touchstart', 'keydown'].forEach(event => {
-            document.addEventListener(event, function loadGTMOnInteraction() {
-                if(window.dataLayer && typeof window.dataLayer.push === 'function') {
-                    try{
-                        window.dataLayer.push({
-                            'event': 'firstUserInteraction',
-                            'interactionType': event
-                        });
-                    }catch(e){}
-                }
-                document.removeEventListener(event, loadGTMOnInteraction);
-            }, { once: true, passive: true });
-        });
-    });
-    
-    // Web Vitals Monitoring (Lightweight)
-    if('PerformanceObserver' in window) {
-        try{
-            const po = new PerformanceObserver((list) => {
-                for(const entry of list.getEntries()) {
-                    if(entry.entryType === 'largest-contentful-paint') {
-                        console.log('LCP:', entry.startTime);
-                    }
-                }
-            });
-            po.observe({entryTypes: ['largest-contentful-paint']});
-        }catch(e){}
-    }
-    
+    document.readyState!=='loading'?init():document.addEventListener('DOMContentLoaded',init);
     }();
     </script>
 </body>
