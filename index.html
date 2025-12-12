@@ -1,74 +1,148 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ozoxx | Acesso Exclusivo</title>
     
-    <!-- META SEO -->
-    <meta name="description" content="Acesso exclusivo Ozoxx. Produtos inovadores para seu bem-estar.">
-    <meta name="keywords" content="ozoxx, produtos, saúde, bem-estar, acesso exclusivo">
+    <!-- TITLE OTIMIZADO PARA SEO -->
+    <title>Ozoxx | Acesso Exclusivo a Produtos Premium de Bem-Estar</title>
+    
+    <!-- META SEO HIPER-OTIMIZADO -->
+    <meta name="description" content="Acesso exclusivo Ozoxx. Produtos premium para saúde e qualidade de vida. Cadastre-se para ver ofertas especiais.">
+    <meta name="keywords" content="ozoxx, produtos, saúde, bem-estar, terapia, qualidade de vida, produtos naturais">
+    <meta name="author" content="Ozoxx">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- OPEN GRAPH / SOCIAL MEDIA -->
     <meta property="og:title" content="Ozoxx | Acesso Exclusivo">
-    <meta property="og:description" content="Descubra os produtos Ozoxx para seu bem-estar.">
+    <meta property="og:description" content="Produtos premium para seu bem-estar. Acesso limitado a ofertas especiais.">
     <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="pt_BR">
     
-    <!-- CRITICAL CSS (1.2KB) -->
+    <!-- PRELOAD ESTRATÉGICO PARA VELOCIDADE -->
+    <link rel="preconnect" href="https://script.google.com">
+    <link rel="preconnect" href="https://ozoxxvenda.github.io" crossorigin>
+    <link rel="dns-prefetch" href="https://script.google.com">
+    
+    <!-- CSS CRÍTICO INLINE (1.5KB) -->
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}.gate-container{background:#fff;border-radius:10px;padding:clamp(20px,5vw,40px);box-shadow:0 10px 40px rgba(0,0,0,.2);max-width:min(500px,90vw);width:100%}h1{color:#333;font-size:clamp(1.5rem,4vw,2rem);margin-bottom:10px;text-align:center}.subtitle{color:#666;text-align:center;margin-bottom:30px;font-size:clamp(.9rem,2.5vw,1.1rem)}.form-group{margin-bottom:15px}input{width:100%;padding:12px;border:2px solid #e1e1e1;border-radius:6px;font-size:16px}input:focus{border-color:#667eea;outline:0}button{width:100%;padding:14px;background:linear-gradient(135deg,#667eea 0%,#764ba2);color:#fff;border:0;border-radius:6px;font-size:1rem;cursor:pointer}.loading{display:none;text-align:center;margin:15px 0;color:#667eea}.privacy{font-size:.75rem;color:#888;text-align:center;margin-top:20px}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;line-height:1.5}.gate-container{background:#fff;border-radius:10px;padding:clamp(20px,5vw,40px);box-shadow:0 10px 40px rgba(0,0,0,.2);max-width:min(500px,90vw);width:100%;animation:fadeIn .3s ease;contain:layout style paint;opacity:0;animation-fill-mode:forwards}h1{color:#333;font-size:clamp(1.5rem,4vw,2rem);margin-bottom:10px;text-align:center;line-height:1.2}.subtitle{color:#666;text-align:center;margin-bottom:30px;font-size:clamp(.9rem,2.5vw,1.1rem)}.form-group{margin-bottom:20px;position:relative}input{width:100%;padding:14px;border:2px solid #e1e1e1;border-radius:6px;font-size:16px;min-height:52px;transition:border-color .2s}input:focus{border-color:#667eea;outline:0}input:valid{border-color:#4CAF50}input:invalid:not(:placeholder-shown){border-color:#f44336}button{width:100%;padding:16px;background:linear-gradient(135deg,#667eea 0%,#764ba2);color:#fff;border:0;border-radius:6px;font-size:1rem;cursor:pointer;min-height:52px;font-weight:600;transition:opacity .2s,transform .1s}button:hover{transform:translateY(-1px)}button:active{transform:translateY(0)}button:disabled{opacity:.6;cursor:not-allowed}.privacy{font-size:.75rem;color:#888;text-align:center;margin-top:25px;line-height:1.4}#errorMsg{display:none;color:#d00;padding:12px;margin-top:15px;border:1px solid #fcc;background:#fee;border-radius:6px;font-size:14px}#loading{display:none;text-align:center;margin:20px 0;color:#667eea}.input-hint{font-size:.75rem;color:#666;margin-top:5px;display:block}.input-error{color:#f44336;font-size:.75rem;margin-top:5px;display:none}@keyframes fadeIn{to{opacity:1}}.phone-format{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#999;font-size:12px;pointer-events:none}
     </style>
     
-    <!-- PRELOAD -->
-    <link rel="preload" href="assets/css/non-critical.css" as="style">
-    <link rel="preload" href="assets/js/app.min.js" as="script">
-    <link rel="preconnect" href="https://script.google.com">
-    
-    <!-- NON-CRITICAL CSS (async) -->
-    <link rel="stylesheet" href="assets/css/non-critical.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="assets/css/non-critical.css"></noscript>
-    
-    <!-- GA (não crítico) -->
-    <script>
-        window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-        gtag('js',new Date());gtag('config','G-XXXXXX',{send_page_view:false});
+    <!-- SCHEMA.ORG PARA SEO AVANÇADO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Acesso Exclusivo Ozoxx",
+        "description": "Página de acesso exclusivo aos produtos premium Ozoxx para bem-estar e qualidade de vida",
+        "url": "https://ozoxxvenda.github.io",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Ozoxx",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ozoxxvenda.github.io/logo.png"
+            }
+        },
+        "mainEntity": {
+            "@type": "Service",
+            "name": "Produtos de Bem-Estar",
+            "description": "Produtos premium para saúde e qualidade de vida"
+        }
+    }
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
 </head>
-<body>
-    <div class="gate-container">
-        <h1>🎁 Conheça o Ozoxx</h1>
-        <p class="subtitle">Preencha para acessar</p>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <div class="gate-container" itemprop="mainContentOfPage">
+        <h1 itemprop="headline">🎁 Conheça o Ozoxx</h1>
+        <p class="subtitle" itemprop="description">Preencha os dados abaixo para acessar conteúdo exclusivo</p>
         
-        <form id="leadForm" method="POST" autocomplete="on">
+        <form id="leadForm" method="POST" autocomplete="on" aria-label="Formulário de acesso exclusivo Ozoxx" novalidate>
+            <!-- Campo Nome -->
             <div class="form-group">
-                <input type="text" name="nome" placeholder="Seu nome" required 
-                       aria-label="Nome completo" autocomplete="name">
-            </div>
-            <div class="form-group">
-                <input type="tel" name="tel" placeholder="(11) 99999-9999" required
-                       aria-label="Telefone" autocomplete="tel">
-            </div>
-            <div class="form-group">
-                <input type="email" name="email" placeholder="seu@email.com"
-                       aria-label="Email" autocomplete="email">
+                <input type="text" 
+                       name="nome" 
+                       placeholder="Seu nome completo" 
+                       required 
+                       aria-required="true"
+                       aria-label="Nome completo"
+                       autocomplete="name"
+                       minlength="2"
+                       maxlength="100"
+                       pattern="[A-Za-zÀ-ÿ\s]{2,}">
+                <span class="input-hint">Mínimo 2 caracteres, apenas letras</span>
+                <span class="input-error" id="nomeError">Nome inválido. Use apenas letras e espaços.</span>
             </div>
             
-            <button type="submit" id="submitBtn" aria-label="Acessar conteúdo">
-                👉 Acessar Agora
+            <!-- Campo Telefone com validação brasileira -->
+            <div class="form-group">
+                <input type="tel" 
+                       name="tel" 
+                       id="phoneInput"
+                       placeholder="(11) 99999-9999" 
+                       required 
+                       aria-required="true"
+                       aria-label="Telefone celular brasileiro com DDD"
+                       autocomplete="tel"
+                       pattern="^\([1-9]{2}\)\s9[0-9]{4}-[0-9]{4}$"
+                       title="Digite um telefone celular válido com DDD: (11) 99999-9999"
+                       maxlength="15"
+                       inputmode="numeric">
+                <span class="input-hint">Formato: (DDD) 99999-9999 (com 9 na frente)</span>
+                <span class="input-error" id="phoneError">Telefone inválido. Use: (11) 99999-9999</span>
+            </div>
+            
+            <!-- Campo Email com validação rigorosa -->
+            <div class="form-group">
+                <input type="email" 
+                       name="email" 
+                       id="emailInput"
+                       placeholder="seu@email.com" 
+                       required
+                       aria-required="true"
+                       aria-label="Endereço de email"
+                       autocomplete="email"
+                       pattern="^[a-zA-Z0-9._%+-]+@(gmail\.com|hotmail\.com|outlook\.com|yahoo\.com|icloud\.com|protonmail\.com|[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$"
+                       title="Digite um email válido (ex: nome@gmail.com, nome@hotmail.com)"
+                       maxlength="100">
+                <span class="input-hint">Aceitamos: @gmail.com, @hotmail.com, @outlook.com, etc.</span>
+                <span class="input-error" id="emailError">Email inválido. Use um provedor válido.</span>
+            </div>
+            
+            <!-- Botão de Envio -->
+            <button type="submit" id="submitBtn" aria-label="Enviar dados e acessar conteúdo exclusivo">
+                👉 Acessar Conteúdo Exclusivo
             </button>
             
-            <div id="loading" class="loading" aria-live="polite">
-                Processando...
+            <!-- Loading Indicator -->
+            <div id="loading" aria-live="polite">
+                <span>Processando seu acesso...</span>
             </div>
+            
+            <!-- Mensagem de Erro -->
+            <div id="errorMsg" role="alert"></div>
         </form>
         
-        <p class="privacy">🔒 Seus dados estão seguros.</p>
+        <p class="privacy" aria-label="Política de privacidade">
+            🔒 Seus dados estão protegidos. Não compartilhamos suas informações com terceiros.
+            Ao preencher, você concorda com nossa política de privacidade.
+        </p>
     </div>
 
-    <!-- JS (defer) -->
-    <script src="assets/js/app.min.js" defer></script>
+    <!-- JAVASCRIPT OTIMIZADO (2.3KB) - DEFERRED -->
+    <script>
+    // ============================================
+    // OZOXX - SISTEMA DE CAPTURA HIPER-OTIMIZADO
+    // ============================================
+    !function(){'use strict';const o={u:'https://script.google.com/macros/s/AKfycbzDI5z4TcBhjEHbmVwtnmk3gTK2oFK6NKJaG8mxTGTKndUp7XxydFTajo9SegbBLi5a/exec',r:'https://ozoxxvenda.github.io/ozoxxterapia/',k:'ozx_v2'};function t(){try{const o=JSON.parse(localStorage.getItem(t.k)||'{}');if(o.c)return void(location.href=t.r)}catch(o){}const t=document.getElementById('leadForm'),e=document.getElementById('phoneInput');t&&(t.addEventListener('submit',o=>{o.preventDefault();const n=o.target,c=n.querySelector('button[type="submit"]');if(c){if(!n.checkValidity()){Array.from(n.elements).forEach(o=>{o.reportValidity()});return}const o={n:n.nome.value.trim(),e:n.email.value.trim(),t:n.tel.value.trim()};if(!o.n||!o.t)return void a('Nome e telefone são obrigatórios');const s=c.textContent;c.disabled=!0,c.textContent='Enviando...';const i=document.getElementById('loading');i&&(i.style.display='block');const d=new AbortController,r=setTimeout(()=>d.abort(),8e3);fetch(o.u,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({nome:o.n,email:o.e,tel:o.t}).toString(),signal:d.signal}).then(o=>{clearTimeout(r);if(!o.ok)throw new Error('HTTP '+o.status);return o.json()}).then(o=>{o.success?(localStorage.setItem(o.k,JSON.stringify({c:1,n:o.n,ts:Date.now()})),setTimeout(()=>{location.href=o.r},600)):a(o.message||'Erro ao salvar')}).catch(o=>{clearTimeout(r),c.disabled=!1,c.textContent=s,i&&(i.style.display='none'),a(o.name==='AbortError'?'Tempo esgotado. Tente novamente.':'Erro: '+o.message)})}},{passive:!1}),e&&function(o){o.addEventListener('input',function(t){let e=t.target.value.replace(/\D/g,'');e.length>11&&(e=e.substring(0,11));if(e.length>0){e='('+e;e.length>3&&(e=e.substring(0,3)+') '+e.substring(3));if(e.length>10){const t=e.substring(0,10),n=e.substring(10);e=t+'-'+n}}t.target.value=e}),o.addEventListener('blur',function(){const t=/^\([1-9]{2}\)\s9[0-9]{4}-[0-9]{4}$/;this.value&&!t.test(this.value)&&(this.setCustomValidity('Formato: (11) 99999-9999'),this.reportValidity())}),o.addEventListener('input',function(){this.setCustomValidity('')})}(e),function(){try{const o=Date.now(),t=parseInt(localStorage.getItem('ozx_vt')||'0');o-t>18e5&&localStorage.setItem('ozx_vc',(parseInt(localStorage.getItem('ozx_vc')||'0')+1).toString()),localStorage.setItem('ozx_vt',o.toString())}catch(o){}}())}function a(o){let t=document.getElementById('errorMsg');t||(t=document.createElement('div'),t.id='errorMsg',t.style.cssText='color:#d00;padding:12px;margin-top:15px;border:1px solid #fcc;background:#fee;border-radius:6px;font-size:14px;',document.querySelector('.gate-container')?.appendChild(t)),t.textContent='❌ '+o,t.style.display='block',setTimeout(()=>t.style.display='none',5e3)}document.readyState!=='loading'?t():document.addEventListener('DOMContentLoaded',t)}();
+    </script>
     
-    <!-- LCP HINT -->
-    <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3C/svg%3E">
+    <!-- FALLBACK PARA JAVASCRIPT DESATIVADO -->
+    <noscript>
+        <style>.gate-container{opacity:1}#leadForm button{background:#999}</style>
+        <meta http-equiv="refresh" content="0;url=https://ozoxxvenda.github.io/ozoxxterapia/?noscript=1">
+    </noscript>
 </body>
 </html>
